@@ -1,0 +1,45 @@
+@charset 'utf-8';
+body {
+ color:rgba(0,0,0,0);
+}
+#glsl_editor span{
+ background-color: #272822;
+}
+.CodeMirror-lines {
+   padding: 0;
+}
+.ge_editor {
+ background-color: rgba(0,0,0,0);
+}
+.CodeMirror {
+ font-size:.72rem;
+ line-height: 1.5;
+ margin: 0;
+}
+.CodeMirror pre {
+ padding: 0;
+}
+.CodeMirror-linenumber {
+ padding: 0;
+ min-width: 1rem;
+}
+
+.CodeMirror-hints {
+ font-size: 32%;
+ font-family: monospace;
+}
+.ge_canvas_container {
+ position: fixed;
+ z-index: -999;
+}
+.ge_canvas {
+ z-index: -999;
+ 
+}
+
+.cm-s-monokai .CodeMirror-gutters {
+ background: rgba(0,0,0,0);
+}
+.cm-s-monokai.CodeMirror {
+ background: rgba(0,0,0,0);
+}
