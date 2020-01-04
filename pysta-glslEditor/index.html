@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang='ja'>
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<link type="text/css" rel="stylesheet" href="./reboot.css">
+<title>GLSL Editor</title>
+<style>
+body {
+ height: 100%;
+ margin: 0;
+ background: #272822;
+}
+
+#glsl_editor {
+ height: 100%;
+}
+</style>
+</head>
+
+<body>
+<div id="glsl_editor"></div>
+</body>
+
+<link type="text/css" rel="stylesheet" href="./glslEditor.css">
+<script type="text/javascript" src="./glslEditor.js"></script>
+<link type="text/css" rel="stylesheet" href="./style.css">
+<script type="text/javascript">
+let cnvs=window.innerWidth;
+//let cnvs=window.innerHeight;
+console.log(cnvs)
+window.glslEditor = new GlslEditor('#glsl_editor', {
+ canvas_size: cnvs,
+   canvas_draggable: true,
+   canvas_resizable: true,
+ theme: 'monokai',
+   watchHash: true,
+   fileDrops: true,
+ menu: false
+});
+
+</script>
+
+</html>
