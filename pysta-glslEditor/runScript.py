@@ -7,8 +7,6 @@ from types import SimpleNamespace
 from pprint import pprint
 
 
-
-
 def pdbg(obj):
   def pPass():
     print('Pass')
@@ -60,6 +58,7 @@ def pdbg(obj):
 
 
 # --- add objc classes
+# コピペ用
 #WKWebView,NSURLRequest=map(ObjCClass,['WKWebView','NSURLRequest'])
 
 # Helpers for invoking ObjC function blocks with no return value
@@ -82,8 +81,10 @@ class WKWebView(ui.View):
   TRACKING_NUMBER = 1 << 4
   FLIGHT_NUMBER = 1 << 5
   LOOKUP_SUGGESTION = 1 << 6
+  # 64bit 整数の限界？
   ALL = 18446744073709551615 # NSUIntegerMax
 
+  # todo: ここをうまく使って、デバッグできれば
   # Global webview index for console
   webviews = []
   console_view = UIApplication.sharedApplication().\
@@ -149,7 +150,7 @@ class WKWebView(ui.View):
     self.webview.setUIDelegate_(ui_delegate)
     
     
-    # dark keybord
+    # dark keybord 設定
     self.objc_instance.overrideUserInterfaceStyle=sel('.dark')
     self.objc_instance.addSubview_(self.webview)
 
@@ -157,6 +158,7 @@ class WKWebView(ui.View):
     if self.respect_safe_areas:
       self.update_safe_area_insets()
     
+    # script の終わるボタン
     self.btn.x=self.width-(self.btn.width*1.6)
     #print(self.btn.x)
     self.btn.y=self.height-(self.btn.height*2.4)
@@ -640,14 +642,10 @@ v = MyWebView(swipe_navigation=True,
   delegate=MyWebViewDelegate(),
   #data_detectors=(WKWebView.PHONE_NUMBER,
                   #WKWebView.LINK),
-flex='WH')
+  flex='WH')
 
 v.load_url(url)
-
-
-
-#
 v.present(title_bar_color=0,hide_title_bar=1)
 #v.present()
-#pdbg(ObjCInstance(v))
+
 

@@ -27,9 +27,11 @@ body {
 <script type="text/javascript" src="./glslEditor.js"></script>
 <link type="text/css" rel="stylesheet" href="./style.css">
 <script type="text/javascript">
+// todo: サイズ変更後再取得
+//       横サイズの取得だけ
+//       小さい方を取る
 let cnvs=window.innerWidth;
-//let cnvs=window.innerHeight;
-console.log(cnvs)
+
 window.glslEditor = new GlslEditor('#glsl_editor', {
  canvas_size: cnvs,
    canvas_draggable: true,
