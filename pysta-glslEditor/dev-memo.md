@@ -49,6 +49,8 @@ Pythonista 上で、気がつかずに`master` でpush 😩
 - iPhone
   - 再度Pythonista 側をpush
   - iSH をpull
+  - なんか、Pythonista とiSH のリポジトリのズレが
+  - とりま、Pythonista 側を消して再度clone
 
 多分これでええか？🥺作業が全く進まん、、、、😤
 
